@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="EX-DECOR, Оренбург: бамбуковые панели, рейки и гибкий мрамор. Бесплатный замер, монтаж стены за 1 день, доставка по России.">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+<title>EX-DECOR Оренбург</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Marck+Script&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: dark walnut hero → cream sheet with floating cards → catalog grid → dark banner with steps → materials → request form → dark footer */
+:root{
+  --walnut:#2a1f17;      /* dark bands, footer */
+  --walnut-2:#3a2b20;
+  --cream:#f3ede4;       /* page */
+  --paper:#fbf8f3;       /* cards */
+  --ink:#2b2420;         /* text */
+  --muted:#7a6d62;
+  --sand:#c9a97a;        /* accent: warm sand, not orange */
+  --line:#e4dacd;
+  --on-dark:#f3ede4;
+  --on-dark-muted:#cbbfb1;
+  --f-display:"Cormorant Garamond","Times New Roman",serif;
+  --f-script:"Marck Script","Segoe Script",cursive;
+  --f-body:"Manrope","Segoe UI",system-ui,sans-serif;
+  --gut:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--walnut)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;text-wrap:balance;margin:0;line-height:1.05}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:14px;border:0;border-radius:999px;padding:12px 12px 12px 26px;font:600 15px var(--f-body);cursor:pointer;text-decoration:none;transition:transform .2s ease, background .2s ease}
+.btn .arr{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--walnut);color:var(--sand)}
+.btn-sand{background:var(--sand);color:var(--walnut)}
+.btn-sand:hover{background:#d6b98d}
+.btn-dark{background:var(--walnut);color:var(--on-dark)}
+.btn-dark .arr{background:var(--sand);color:var(--walnut)}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(42,31,23,.92);backdrop-filter:blur(8px);color:var(--on-dark)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.logo b{font-family:var(--f-display);font-size:28px;font-weight:600;letter-spacing:.08em}
+.logo small{font-size:10px;letter-spacing:.32em;color:var(--sand);margin-top:4px;text-transform:uppercase}
+.menu{display:flex;gap:28px;font-size:14px}
+.menu a{text-decoration:none;color:var(--on-dark-muted)}
+.menu a:hover{color:var(--sand)}
+.nav .btn{padding:9px 9px 9px 20px;font-size:14px}
+.nav .btn .arr{width:28px;height:28px}
+
+/* hero */
+.hero{position:relative;background:var(--walnut);color:var(--on-dark);overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(32,23,17,.94) 0%,rgba(32,23,17,.78) 38%,rgba(32,23,17,.15) 75%,rgba(32,23,17,.05) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-block:110px 150px}
+.hero h1{font-size:clamp(44px,6.4vw,84px);max-width:13ch}
+.hero h1 .script{font-family:var(--f-script);color:var(--sand);font-size:1.12em;font-weight:400;display:inline-block;transform:rotate(-4deg);margin-right:.12em}
+.hero p.lead{max-width:44ch;margin-top:26px;font-size:17px;color:var(--on-dark-muted)}
+.hero .btn{margin-top:34px}
+.perks{display:flex;flex-wrap:wrap;gap:14px 34px;margin-top:56px;font-size:13px;color:var(--on-dark-muted)}
+.perks div{display:flex;align-items:center;gap:10px;max-width:180px;line-height:1.35}
+.perks svg{flex:none;color:var(--sand)}
+
+/* about card */
+.about{margin-top:-90px;position:relative;z-index:2}
+.about .card{background:var(--paper);border-radius:22px;padding:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;box-shadow:0 20px 50px -30px rgba(42,31,23,.45)}
+.about .ph{border-radius:14px;overflow:hidden;aspect-ratio:16/11;max-width:100%}
+.about .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block}
+.about .txt{padding:22px 10px 10px 0;display:flex;flex-direction:column;gap:18px;min-width:0}
+.about h2{font-size:42px}
+.about p{color:var(--muted);max-width:56ch}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:10px}
+.facts b{display:block;white-space:nowrap;font-family:var(--f-display);font-size:clamp(26px,2.6vw,34px);font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:12.5px;color:var(--muted);line-height:1.35;display:block;margin-top:8px}
+
+section{padding-block:84px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.sec-head h2{font-size:clamp(34px,4vw,46px)}
+.sec-head a{font-size:14px;color:var(--muted);text-decoration:none}
+.sec-head a:hover{color:var(--ink)}
+
+/* catalog */
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.prod{background:var(--paper);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line);transition:transform .25s ease, box-shadow .25s ease}
+.prod:hover{transform:translateY(-3px);box-shadow:0 18px 40px -28px rgba(42,31,23,.5)}
+.prod .ph{aspect-ratio:4/3.4;overflow:hidden}
+.prod .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.prod:hover .ph img{transform:scale(1.04)}
+.prod .body{padding:18px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.prod h3{font-family:var(--f-body);font-size:16px;font-weight:700;line-height:1.3}
+.prod .spec{font-size:13px;color:var(--muted);line-height:1.45}
+.prod .foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px}
+.prod .price{font-family:var(--f-display);font-size:24px;font-weight:600;font-variant-numeric:tabular-nums}
+.prod .price small{font-family:var(--f-body);font-size:12px;color:var(--muted);font-weight:500}
+.prod .go{width:34px;height:34px;border-radius:50%;background:var(--walnut);color:var(--sand);display:grid;place-items:center;text-decoration:none;flex:none}
+
+/* banner */
+.banner{border-radius:24px;overflow:hidden;position:relative;background:var(--walnut);color:var(--on-dark)}
+.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;opacity:.38}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(42,31,23,.95) 0%,rgba(42,31,23,.7) 55%,rgba(42,31,23,.45) 100%)}
+.banner .in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:40px;padding:48px 44px;align-items:center}
+.banner h2{font-size:clamp(32px,3.6vw,44px)}
+.banner p{color:var(--on-dark-muted);margin-top:14px;max-width:46ch}
+.banner .btn{margin-top:26px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;border-top:1px solid rgba(201,169,122,.45);padding-top:16px;font-size:14px;color:var(--on-dark-muted);line-height:1.45}
+.steps li::before{content:"0" counter(s);display:block;font-family:var(--f-display);font-size:30px;color:var(--sand);margin-bottom:8px;line-height:1}
+.steps b{color:var(--on-dark);display:block;font-size:15px;margin-bottom:4px}
+
+/* rooms */
+.rooms{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:260px 260px;gap:16px}
+.room{position:relative;border-radius:18px;overflow:hidden;color:var(--on-dark)}
+.room:first-child{grid-row:span 2}
+.room img{width:100%;height:100%;object-fit:cover;display:block}
+.room span{position:absolute;left:14px;bottom:14px;background:rgba(42,31,23,.78);backdrop-filter:blur(4px);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
+
+/* materials */
+.mats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.mat{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:start}
+.mat .sw{aspect-ratio:3/4;border-radius:12px;overflow:hidden}
+.mat .sw img{width:100%;height:100%;object-fit:cover;display:block}
+.mat h3{font-size:30px}
+.mat dl{margin:16px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 18px;font-size:14px}
+.mat dt{color:var(--muted)}
+.mat dd{margin:0;font-weight:600}
+.mat .note{margin-top:14px;font-size:12.5px;color:var(--muted)}
+
+/* form */
+.req{background:var(--paper);border-radius:24px;display:grid;grid-template-columns:minmax(0,1fr) 220px minmax(0,1.1fr);gap:30px;align-items:center;padding:34px 40px;border:1px solid var(--line)}
+.req h2{font-size:clamp(30px,3.4vw,40px)}
+.req .sub{color:var(--muted);margin-top:12px;font-size:14px;max-width:38ch}
+.req .pic{border-radius:16px;overflow:hidden;aspect-ratio:3/4;max-width:100%}
+.req .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.req form{display:flex;flex-direction:column;gap:12px;min-width:0}
+.req label.t{font-weight:700;font-size:15px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.req input[type=tel],.req input[type=text]{flex:1 1 200px;min-width:0;border:1px solid var(--line);background:var(--cream);border-radius:999px;padding:14px 20px;font:15px var(--f-body);color:var(--ink)}
+.req .chk{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--muted)}
+.req .chk input{accent-color:var(--walnut);margin-top:3px}
+.req .ok{font-size:14px;background:var(--cream);border-radius:14px;padding:12px 16px;border:1px solid var(--line)}
+.kw{font-weight:700;letter-spacing:.06em;background:var(--walnut);color:var(--sand);padding:2px 9px;border-radius:6px;font-size:13px}
+
+/* contacts: messengers + mail */
+.req textarea{min-width:0;border:1px solid var(--line);background:var(--cream);border-radius:18px;padding:12px 20px;font:15px var(--f-body);color:var(--ink);resize:vertical;min-height:76px}
+.req textarea:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+.alt{display:flex;flex-direction:column;gap:10px;border-top:1px dashed var(--line);padding-top:14px;margin-top:4px}
+.alt b{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.chan{display:flex;gap:8px;flex-wrap:wrap}
+.ch{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:10px 16px;font:600 14px var(--f-body);text-decoration:none;border:1px solid var(--line);background:var(--cream);color:var(--ink);cursor:pointer;transition:transform .2s ease,border-color .2s ease}
+.ch:hover{transform:translateY(-1px);border-color:var(--sand)}
+.ch.tg svg{color:#2a8ec8}.ch.wa svg{color:#1f9e55}.ch.ml svg{color:var(--walnut)}
+.ch:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+.addrline{font-size:13.5px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.addrline code{font:600 13.5px var(--f-body);color:var(--ink);user-select:all;background:var(--cream);padding:3px 9px;border-radius:8px;border:1px solid var(--line)}
+.addrline button{border:0;background:none;color:var(--walnut);font:600 13px var(--f-body);text-decoration:underline;cursor:pointer;padding:2px}
+.stub{outline:2px dashed #c0542f;outline-offset:2px}
+.stubnote{font-size:12px;color:#a8442a;font-weight:600}
+.req .ok.good{background:#eaf3ea;border-color:#bcd8bd}
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;flex-direction:column;gap:10px}
+.fab a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 10px 24px -8px rgba(42,31,23,.55);transition:transform .2s ease}
+.fab a:hover{transform:scale(1.06)}
+.fab a svg{width:26px;height:26px}
+.fab .tg{background:#2a8ec8}.fab .wa{background:#1f9e55}
+.fab a:focus-visible{outline:3px solid var(--sand);outline-offset:3px}
+@media (max-width:560px){.fab a{width:46px;height:46px}.fab a svg{width:22px;height:22px}}
+
+/* footer */
+footer{background:var(--walnut);color:var(--on-dark-muted);margin-top:90px;font-size:14px}
+footer .wrap{padding-block:56px 30px}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:30px}
+footer h4{color:var(--on-dark);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--sand)}
+footer .logo b{color:var(--on-dark)}
+footer .addr{color:var(--on-dark);font-size:16px}
+.legal{border-top:1px solid rgba(203,191,177,.18);margin-top:40px;padding-top:20px;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+
+/* catalog view */
+.pggrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pg{margin:0;background:var(--walnut);border-radius:14px;overflow:hidden}
+.pg img{display:block;width:100%;height:auto}
+.pg figcaption{padding:8px 14px;font-size:13px;color:var(--on-dark-muted);font-weight:600}
+@media (max-width:700px){.pggrid{grid-template-columns:minmax(0,1fr)}}
+
+.cat-hero{background:var(--walnut);color:var(--on-dark);padding-block:56px 60px}
+.cat-hero h1{font-size:clamp(42px,6vw,76px)}
+.cat-hero .script{font-family:var(--f-script);color:var(--sand);font-weight:400;font-size:1.1em;display:inline-block;transform:rotate(-4deg)}
+.cat-hero .lead{color:var(--on-dark-muted);margin-top:16px;max-width:52ch}
+.back{display:inline-block;margin-bottom:24px;color:var(--on-dark-muted);text-decoration:none;font-size:14px}
+.back:hover{color:var(--sand)}
+.cat-jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.cat-jump a{border:1px solid rgba(201,169,122,.5);border-radius:999px;padding:10px 18px;text-decoration:none;font-size:14px;color:var(--on-dark)}
+.cat-jump a:hover{background:var(--sand);color:var(--walnut)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tab{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:8px 16px;font:600 14px var(--f-body);color:var(--ink);cursor:pointer}
+.tab span{color:var(--muted);font-weight:500;margin-left:4px}
+.tab.on{background:var(--walnut);color:var(--on-dark);border-color:var(--walnut)}
+.tab.on span{color:var(--sand)}
+.swgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.sw{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.swgrid .sw img{display:block;width:100%;height:auto;aspect-ratio:488/740;object-fit:cover}
+.sw figcaption{padding:7px 10px;font-size:13px;font-weight:700;letter-spacing:.04em}
+.fine{margin-top:18px;font-size:13px;color:var(--muted)}
+.bam-top{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:16px;margin-bottom:22px}
+.bam-ph{border-radius:16px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
+.bam-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.bam-spec{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 18px;align-content:start;font-size:14px}
+.bam-spec dt{color:var(--muted)}
+.bam-spec dd{margin:0;font-weight:600}
+.sergrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.ser{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.ser .ph{position:relative;aspect-ratio:4/3}
+.ser .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph-empty{width:100%;height:100%;background:repeating-linear-gradient(90deg,var(--line) 0 14px,var(--paper) 14px 18px)}
+.ser .code{position:absolute;left:8px;bottom:8px;background:var(--walnut);color:var(--sand);font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px}
+.ser .b{padding:12px 14px 14px}
+.ser h3{font-family:var(--f-body);font-size:15px;font-weight:700;line-height:1.3}
+.ser p{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.4}
+@media (max-width:980px){.sergrid{grid-template-columns:repeat(3,minmax(0,1fr))}.bam-top{grid-template-columns:1fr 1fr}.bam-spec{grid-column:span 2}}
+@media (max-width:560px){.sergrid{grid-template-columns:repeat(2,minmax(0,1fr))}.swgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+
+@media (max-width:980px){
+  .menu{display:none}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about .card,.banner .in,.mats{grid-template-columns:minmax(0,1fr)}
+  .about .txt{padding:6px}
+  .req{grid-template-columns:minmax(0,1fr);padding:28px 24px}
+  .req .pic{display:none}
+  .fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rooms{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .room:first-child{grid-row:auto;grid-column:span 2;aspect-ratio:16/10}
+  .room{aspect-ratio:4/5}
+}
+@media (max-width:560px){
+  .hero .wrap{padding-block:70px 130px}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .banner .in{padding:32px 22px}
+  .mat{grid-template-columns:minmax(0,1fr);padding:22px}
+  .mat .sw{aspect-ratio:16/9}
+  .fgrid{grid-template-columns:minmax(0,1fr)}
+  .nav .btn span.t{display:none}
+  .nav .btn{padding:9px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* примерочная: образец на стене */
+.swgrid .sw{cursor:zoom-in;position:relative;transition:transform .2s ease,box-shadow .2s ease}
+.swgrid .sw:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(42,31,23,.14)}
+.swgrid .sw::after{content:"на стене";position:absolute;top:8px;right:8px;background:rgba(42,31,23,.72);color:var(--on-dark);font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;opacity:0;transition:opacity .2s}
+.swgrid .sw:hover::after{opacity:1}
+.fine-try{margin:-8px 0 18px;font-size:14px;color:var(--muted)}
+dialog.viz{border:0;padding:0;border-radius:18px;width:min(1100px,calc(100vw - 24px));max-height:calc(100vh - 24px);background:var(--paper);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:auto}
+dialog.viz::backdrop{background:rgba(20,14,10,.72)}
+.viz-head{display:flex;align-items:center;gap:14px;padding:16px 18px 12px}
+.viz-sw{width:44px;height:58px;border-radius:8px;overflow:hidden;flex:none;border:1px solid var(--line)}
+.viz-sw img{width:100%;height:100%;object-fit:cover;display:block}
+.viz-title{flex:1;min-width:0}
+.viz-title b{display:block;font-family:var(--f-body);font-size:22px;font-weight:700;letter-spacing:.04em;line-height:1.2}
+.viz-title span{font-size:13px;color:var(--muted)}
+.viz-x{border:0;background:var(--cream);width:40px;height:40px;border-radius:50%;font-size:22px;line-height:1;cursor:pointer;color:var(--ink);flex:none}
+.viz-rooms{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 12px;margin:0}
+.viz-stage{position:relative;aspect-ratio:1600/1195;margin:0 18px;border-radius:12px;overflow:hidden;background:#ddd}
+.viz-stage>canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.viz-tex{background-repeat:repeat;background-position:center top}
+.viz-sh{mix-blend-mode:multiply;object-fit:cover}
+.viz-room{object-fit:cover}
+.swgrid .sw.has-ai::before{content:"фото";position:absolute;top:6px;left:6px;z-index:2;background:rgba(255,255,255,.92);color:var(--ink);font:700 11px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;padding:5px 7px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.viz-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;padding:14px 18px 18px}
+.viz-foot p{flex:1 1 260px;margin:0;font-size:13px;color:var(--muted)}
+.viz-nav{display:flex;gap:8px}
+.viz-nav button{border:1px solid var(--line);background:var(--cream);border-radius:999px;padding:8px 14px;font:600 14px var(--f-body);color:var(--ink);cursor:pointer}
+@media (max-width:560px){.viz-stage{margin:0 10px}.viz-head,.viz-foot{padding-left:12px;padding-right:12px}.viz-rooms{padding:0 12px 10px}.viz-title b{font-size:22px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><b>EX-DECOR</b><small>стены под ключ</small></a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#katalog">Каталог</a>
+      <a href="#rooms">Где применяют</a>
+      <a href="#montazh">Монтаж</a>
+      <a href="#materials">Материалы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn-sand" href="#request"><span class="t">Рассчитать стену</span><span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</header>
+
+<main id="top" class="home-view">
+  <section class="hero" style="padding:0">
+    <img class="bg" src="img/hero.jpg" alt="ТВ-зона: гибкий мрамор в центре, по бокам реечные бамбуковые панели">
+    <div class="wrap">
+      <h1>Стены, которые <span class="script">задают</span> тон вашему дому</h1>
+      <p class="lead">Бамбуковые панели, рейки и гибкий мрамор напрямую с завода. Замеряем бесплатно, монтируем своей бригадой: одна стена за один день.</p>
+      <a class="btn btn-sand" href="#katalog">Смотреть каталог <span class="arr" aria-hidden="true">→</span></a>
+      <div class="perks">
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3" width="3" height="18" rx="1"/><rect x="10.5" y="3" width="3" height="18" rx="1"/><rect x="17" y="3" width="3" height="18" rx="1"/></svg>Напрямую с завода</div>
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg>Монтаж стены за 1 день</div>
+        <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 17h13V6H3zM16 10h3.5l1.5 3v4h-5"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg>Доставка по всей России</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap about">
+    <div class="card">
+      <div class="ph"><img src="img/brigada.jpg" alt="Бригада EX-DECOR заканчивает монтаж прихожей"></div>
+      <div class="txt">
+        <span class="eyebrow">О шоуруме</span>
+        <h2>Продаём и монтируем сами</h2>
+        <p>EX-DECOR — шоурум отделки в Оренбурге на Терешковой, 287/3. Образцы панелей и мрамора можно потрогать руками. Мы и подбираем материал, и монтируем его своей бригадой, поэтому за результат отвечаем целиком.</p>
+        <div class="facts">
+          <div><b>1 день</b><span>монтаж одной стены</span></div>
+          <div><b>3 м</b><span>длина бамбуковой панели</span></div>
+          <div><b>2,8×1,22</b><span>лист гибкого мрамора, м</span></div>
+          <div><b>3 мм</b><span>толщина мрамора</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="catalog">
+    <div class="wrap">
+      <div class="sec-head"><h2>Материалы</h2><a href="#katalog">Весь каталог декоров →</a></div>
+      <div class="grid4">
+        <article class="prod">
+          <div class="ph"><img style="object-position:50% 85%" src="img/bambuk.jpg" alt="Гостиная со стеной из бамбуковых панелей цвета орех"></div>
+          <div class="body">
+            <h3>Бамбуковые панели</h3>
+            <p class="spec">ДПК, длина 3 м, шип-паз. Декоры: дерево, однотонные, ткань, металл</p>
+            <div class="foot"><span class="price">по запросу</span><a class="go" href="#request" aria-label="Рассчитать бамбуковые панели">→</a></div>
+          </div>
+        </article>
+        <article class="prod">
+          <div class="ph"><img src="img/reiki.jpg" alt="Кухня с реечными панелями и подсветкой"></div>
+          <div class="body">
+            <h3>Реечные панели</h3>
+            <p class="spec">Рейки для стен и потолков, кухни, ТВ-зоны и прихожей</p>
+            <div class="foot"><span class="price">по запросу</span><a class="go" href="#request" aria-label="Рассчитать реечные панели">→</a></div>
+          </div>
+        </article>
+        <article class="prod">
+          <div class="ph"><img src="img/mramor-mat.jpg" alt="Гостиная с ТВ-стеной из тёмного матового гибкого мрамора"></div>
+          <div class="body">
+            <h3>Гибкий мрамор · матовый</h3>
+            <p class="spec">Лист 2,8 × 1,22 м, 3 мм. Влагостойкий, не выцветает</p>
+            <div class="foot"><span class="price">по запросу</span><a class="go" href="#request" aria-label="Рассчитать матовый мрамор">→</a></div>
+          </div>
+        </article>
+        <article class="prod">
+          <div class="ph"><img src="img/mramor-gloss.jpg" alt="Стена из глянцевого гибкого мрамора с подвесным светильником"></div>
+          <div class="body">
+            <h3>Гибкий мрамор · глянец</h3>
+            <p class="spec">Лист 2,8 × 1,22 м, 3 мм. Ударостойкий, для кухни и ванной</p>
+            <div class="foot"><span class="price">по запросу</span><a class="go" href="#request" aria-label="Рассчитать глянцевый мрамор">→</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="montazh">
+    <div class="wrap">
+      <div class="banner">
+        <img src="img/prihozhaya.jpg" alt="" aria-hidden="true">
+        <div class="in">
+          <div>
+            <h2>Стена под ключ за один день</h2>
+            <p>Материал и монтаж считаем одной суммой. Без штукатурки, покраски и недели пыли.</p>
+            <a class="btn btn-sand" href="#request">Заказать замер <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+          <ol class="steps">
+            <li><b>Бесплатный замер</b>Приезжаем, меряем стену, привозим образцы.</li>
+            <li><b>Расчёт и подбор</b>Подбираем 2–3 декора и считаем материал с монтажом.</li>
+            <li><b>Монтаж</b>Бригада EX-DECOR собирает стену за 1 день.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rooms">
+    <div class="wrap">
+      <div class="sec-head"><h2>Где применяют</h2><span class="eyebrow">ТВ-зона · кухня · ванная · спальня · прихожая</span></div>
+      <div class="rooms">
+        <div class="room"><img src="img/reiki.jpg" alt="Кухня с рейками и мрамором"><span>Кухня</span></div>
+        <div class="room"><img src="img/vannaya.jpg" alt="Ванная с гибким мрамором"><span>Ванная</span></div>
+        <div class="room"><img src="img/spalnya.jpg" alt="Спальня со стеной из тёмного мрамора"><span>Спальня</span></div>
+        <div class="room"><img src="img/stolovaya.jpg" alt="Столовая со стеной из тёмного мрамора"><span>Столовая</span></div>
+        <div class="room"><img src="img/hero.jpg" alt="ТВ-зона с мрамором и рейками" style="object-position:55% 60%"><span>ТВ-зона</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials">
+    <div class="wrap">
+      <div class="sec-head"><h2>Из чего это сделано</h2><span class="eyebrow">характеристики материалов</span></div>
+      <div class="mats">
+        <div class="mat">
+          <div class="sw"><img src="img/faktura.jpg" alt="Рука на рельефе бамбуковой панели"></div>
+          <div>
+            <h3>Бамбуковые панели</h3>
+            <dl>
+              <dt>Основа</dt><dd>ДПК (WPC): ПВХ-смола, бамбуковое и древесное волокно, карбонат кальция, антипирены</dd>
+              <dt>Длина</dt><dd>3 000 мм</dd>
+              <dt>Соединение</dt><dd>шип-паз</dd>
+              <dt>Где</dt><dd>внутренние стены и потолки</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="mat">
+          <div class="sw"><img src="img/ruka.jpg" alt="Рука на стене из светлого гибкого мрамора"></div>
+          <div>
+            <h3>Гибкий мрамор</h3>
+            <dl>
+              <dt>Основа</dt><dd>ПВХ</dd>
+              <dt>Лист</dt><dd>2,8 × 1,22 м (3,4 м²), 3 мм</dd>
+              <dt>Свойства</dt><dd>влагостойкий, не выцветает, ударостойкий</dd>
+              <dt>Где</dt><dd>ТВ-зона, кухня, ванная, балкон, офис, кафе</dd>
+            </dl>
+            <p class="note">Стыки есть, но лист большой, поэтому их намного меньше, чем у плитки.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="request">
+    <div class="wrap">
+      <div class="req">
+        <div>
+          <h2>Посчитаем вашу стену по фото</h2>
+          <p class="sub">Оставьте телефон, и мы перезвоним, подберём декоры и назовём цену с монтажом. Или напишите <span class="kw">СТЕНА</span> в директ @exdecor.ru.</p>
+        </div>
+        <div class="pic"><img src="img/ruka.jpg" alt=""></div>
+        <form id="f" novalidate>
+          <label class="t" for="phone">Бесплатный расчёт и замер</label>
+          <div class="row">
+            <input id="name" type="text" placeholder="Имя" autocomplete="given-name">
+            <input id="phone" type="tel" placeholder="+7 ___ ___-__-__" autocomplete="tel" required>
+          </div>
+          <textarea id="msg" rows="2" placeholder="Что хотите сделать: комната, размер стены, материал (необязательно)"></textarea>
+          <label class="chk"><input id="agree" type="checkbox" checked> Согласен на обработку персональных данных</label>
+          <button class="btn btn-dark" type="submit">Отправить заявку <span class="arr" aria-hidden="true">→</span></button>
+          <p class="ok" id="ok" hidden></p>
+          <div class="alt">
+            <b>Или напишите нам сами</b>
+            <div class="chan">
+              <a class="ch tg" data-c="tg" href="https://t.me/panelka56" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1.1-1 .2-1.5L20.6 2.8c.9-.3 1.6.2 1.3 1.5Z"/></svg>Telegram</a>
+              <a class="ch wa" data-c="wa" href="#request" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg>WhatsApp</a>
+              <a class="ch ml" data-c="ml" href="#request"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 5.5h18v13H3z M3.5 6l8.5 7 8.5-7"/></svg>Почта</a>
+            </div>
+            <p class="addrline">Почта: <code id="mail-text">drakdrakula561@gmail.com</code><button type="button" id="mail-copy">Скопировать</button></p>
+            <p class="stubnote" id="stubnote" hidden></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<main id="katalog-view" hidden>
+  <section class="cat-hero">
+    <div class="wrap">
+      <a class="back" href="#top">← На главную</a>
+      <h1>Каталог <span class="script">декоров</span></h1>
+      <p class="lead">Бамбуковые панели и гибкий мрамор. Цены уточняйте в шоуруме или в директ.</p>
+      <nav class="cat-jump" aria-label="Разделы каталога"><a href="#katalog-mramor" data-jump="katalog-mramor">Гибкий мрамор · 94 декора</a><a href="#katalog-bambuk" data-jump="katalog-bambuk">Бамбуковые панели · 144 декора</a></nav>
+    </div>
+  </section>
+
+  <section id="katalog-mramor">
+    <div class="wrap">
+      <div class="sec-head"><h2>Гибкий мрамор</h2><span class="eyebrow">лист 2,8 × 1,22 м · 3 мм · ПВХ</span></div>
+      <div class="tabs" role="group" aria-label="Серия"><button type="button" class="tab on" data-f="all">Все <span>94</span></button><button type="button" class="tab" data-f="C">Серия C <span>9</span></button><button type="button" class="tab" data-f="E">Серия E <span>42</span></button><button type="button" class="tab" data-f="M">Серия M <span>43</span></button></div>
+      <p class="fine-try">Нажмите на образец, чтобы увидеть его на стене кухни, спальни, ванной или гостиной. Со значком «фото» — реалистичные интерьеры.</p><div class="swgrid" id="swgrid"><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C02.jpg" alt="Гибкий мрамор, декор C02"><figcaption>C02</figcaption></figure><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C03.jpg" alt="Гибкий мрамор, декор C03"><figcaption>C03</figcaption></figure><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C04.jpg" alt="Гибкий мрамор, декор C04"><figcaption>C04</figcaption></figure><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C05.jpg" alt="Гибкий мрамор, декор C05"><figcaption>C05</figcaption></figure><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C06.jpg" alt="Гибкий мрамор, декор C06"><figcaption>C06</figcaption></figure><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C07.jpg" alt="Гибкий мрамор, декор C07"><figcaption>C07</figcaption></figure><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C08.jpg" alt="Гибкий мрамор, декор C08"><figcaption>C08</figcaption></figure><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C11.jpg" alt="Гибкий мрамор, декор C11"><figcaption>C11</figcaption></figure><figure class="sw" data-s="C"><img loading="lazy" width="488" height="740" src="cat/m/C12.jpg" alt="Гибкий мрамор, декор C12"><figcaption>C12</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E01.jpg" alt="Гибкий мрамор, декор E01"><figcaption>E01</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E02.jpg" alt="Гибкий мрамор, декор E02"><figcaption>E02</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E03.jpg" alt="Гибкий мрамор, декор E03"><figcaption>E03</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E06.jpg" alt="Гибкий мрамор, декор E06"><figcaption>E06</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E07.jpg" alt="Гибкий мрамор, декор E07"><figcaption>E07</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E08.jpg" alt="Гибкий мрамор, декор E08"><figcaption>E08</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E10.jpg" alt="Гибкий мрамор, декор E10"><figcaption>E10</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E11.jpg" alt="Гибкий мрамор, декор E11"><figcaption>E11</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E12.jpg" alt="Гибкий мрамор, декор E12"><figcaption>E12</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E14.jpg" alt="Гибкий мрамор, декор E14"><figcaption>E14</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E27.jpg" alt="Гибкий мрамор, декор E27"><figcaption>E27</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E28.jpg" alt="Гибкий мрамор, декор E28"><figcaption>E28</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E29.jpg" alt="Гибкий мрамор, декор E29"><figcaption>E29</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E30.jpg" alt="Гибкий мрамор, декор E30"><figcaption>E30</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E31.jpg" alt="Гибкий мрамор, декор E31"><figcaption>E31</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E32.jpg" alt="Гибкий мрамор, декор E32"><figcaption>E32</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E33.jpg" alt="Гибкий мрамор, декор E33"><figcaption>E33</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E34.jpg" alt="Гибкий мрамор, декор E34"><figcaption>E34</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E35.jpg" alt="Гибкий мрамор, декор E35"><figcaption>E35</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E49.jpg" alt="Гибкий мрамор, декор E49"><figcaption>E49</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E50.jpg" alt="Гибкий мрамор, декор E50"><figcaption>E50</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E51.jpg" alt="Гибкий мрамор, декор E51"><figcaption>E51</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E52.jpg" alt="Гибкий мрамор, декор E52"><figcaption>E52</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E53.jpg" alt="Гибкий мрамор, декор E53"><figcaption>E53</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E54.jpg" alt="Гибкий мрамор, декор E54"><figcaption>E54</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E55.jpg" alt="Гибкий мрамор, декор E55"><figcaption>E55</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E56.jpg" alt="Гибкий мрамор, декор E56"><figcaption>E56</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E58.jpg" alt="Гибкий мрамор, декор E58"><figcaption>E58</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E59.jpg" alt="Гибкий мрамор, декор E59"><figcaption>E59</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E60.jpg" alt="Гибкий мрамор, декор E60"><figcaption>E60</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E61.jpg" alt="Гибкий мрамор, декор E61"><figcaption>E61</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E62.jpg" alt="Гибкий мрамор, декор E62"><figcaption>E62</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E63.jpg" alt="Гибкий мрамор, декор E63"><figcaption>E63</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E64.jpg" alt="Гибкий мрамор, декор E64"><figcaption>E64</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E65.jpg" alt="Гибкий мрамор, декор E65"><figcaption>E65</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E66.jpg" alt="Гибкий мрамор, декор E66"><figcaption>E66</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E67.jpg" alt="Гибкий мрамор, декор E67"><figcaption>E67</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E68.jpg" alt="Гибкий мрамор, декор E68"><figcaption>E68</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E69.jpg" alt="Гибкий мрамор, декор E69"><figcaption>E69</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E70.jpg" alt="Гибкий мрамор, декор E70"><figcaption>E70</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E71.jpg" alt="Гибкий мрамор, декор E71"><figcaption>E71</figcaption></figure><figure class="sw" data-s="E"><img loading="lazy" width="488" height="740" src="cat/m/E72.jpg" alt="Гибкий мрамор, декор E72"><figcaption>E72</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M08.jpg" alt="Гибкий мрамор, декор M08"><figcaption>M08</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M14.jpg" alt="Гибкий мрамор, декор M14"><figcaption>M14</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M28.jpg" alt="Гибкий мрамор, декор M28"><figcaption>M28</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M34.jpg" alt="Гибкий мрамор, декор M34"><figcaption>M34</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M36.jpg" alt="Гибкий мрамор, декор M36"><figcaption>M36</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M39.jpg" alt="Гибкий мрамор, декор M39"><figcaption>M39</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M61.jpg" alt="Гибкий мрамор, декор M61"><figcaption>M61</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M64.jpg" alt="Гибкий мрамор, декор M64"><figcaption>M64</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M65.jpg" alt="Гибкий мрамор, декор M65"><figcaption>M65</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M66.jpg" alt="Гибкий мрамор, декор M66"><figcaption>M66</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M68.jpg" alt="Гибкий мрамор, декор M68"><figcaption>M68</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M69.jpg" alt="Гибкий мрамор, декор M69"><figcaption>M69</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M70.jpg" alt="Гибкий мрамор, декор M70"><figcaption>M70</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M71.jpg" alt="Гибкий мрамор, декор M71"><figcaption>M71</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M71-B.jpg" alt="Гибкий мрамор, декор M71-B"><figcaption>M71-B</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M73.jpg" alt="Гибкий мрамор, декор M73"><figcaption>M73</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M74.jpg" alt="Гибкий мрамор, декор M74"><figcaption>M74</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M75.jpg" alt="Гибкий мрамор, декор M75"><figcaption>M75</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M77.jpg" alt="Гибкий мрамор, декор M77"><figcaption>M77</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M79.jpg" alt="Гибкий мрамор, декор M79"><figcaption>M79</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M79-B.jpg" alt="Гибкий мрамор, декор M79-B"><figcaption>M79-B</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M80.jpg" alt="Гибкий мрамор, декор M80"><figcaption>M80</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M81.jpg" alt="Гибкий мрамор, декор M81"><figcaption>M81</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M86.jpg" alt="Гибкий мрамор, декор M86"><figcaption>M86</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M87.jpg" alt="Гибкий мрамор, декор M87"><figcaption>M87</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M88.jpg" alt="Гибкий мрамор, декор M88"><figcaption>M88</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M89.jpg" alt="Гибкий мрамор, декор M89"><figcaption>M89</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M90.jpg" alt="Гибкий мрамор, декор M90"><figcaption>M90</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M91.jpg" alt="Гибкий мрамор, декор M91"><figcaption>M91</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M92.jpg" alt="Гибкий мрамор, декор M92"><figcaption>M92</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M93.jpg" alt="Гибкий мрамор, декор M93"><figcaption>M93</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M94.jpg" alt="Гибкий мрамор, декор M94"><figcaption>M94</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M95.jpg" alt="Гибкий мрамор, декор M95"><figcaption>M95</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M96.jpg" alt="Гибкий мрамор, декор M96"><figcaption>M96</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M97.jpg" alt="Гибкий мрамор, декор M97"><figcaption>M97</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M98.jpg" alt="Гибкий мрамор, декор M98"><figcaption>M98</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M99.jpg" alt="Гибкий мрамор, декор M99"><figcaption>M99</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M100.jpg" alt="Гибкий мрамор, декор M100"><figcaption>M100</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M102.jpg" alt="Гибкий мрамор, декор M102"><figcaption>M102</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M104.jpg" alt="Гибкий мрамор, декор M104"><figcaption>M104</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M105.jpg" alt="Гибкий мрамор, декор M105"><figcaption>M105</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M106.jpg" alt="Гибкий мрамор, декор M106"><figcaption>M106</figcaption></figure><figure class="sw" data-s="M"><img loading="lazy" width="488" height="740" src="cat/m/M107.jpg" alt="Гибкий мрамор, декор M107"><figcaption>M107</figcaption></figure></div>
+      <p class="fine">Рисунок и оттенок могут отличаться от изображения. Образцы можно посмотреть в шоуруме на Терешковой, 287/3.</p>
+    </div>
+  </section>
+
+  <section id="katalog-bambuk">
+    <div class="wrap">
+      <div class="sec-head"><h2>Бамбуковые панели</h2><span class="eyebrow">ДПК · длина 3 000 мм · шип-паз</span></div>
+      <div class="bam-top">
+        <div class="bam-ph"><img loading="lazy" src="cat/b/foto2_reechnye.jpg" alt="Реечные бамбуковые панели в интерьере"></div>
+        <div class="bam-ph"><img loading="lazy" src="cat/b/foto1_derevo.jpg" alt="Бамбуковые панели под дерево в интерьере"></div>
+        <dl class="bam-spec">
+          <dt>Основа</dt><dd>ПВХ-смола, бамбуковое и древесное волокно, карбонат кальция, антипирены</dd>
+          <dt>Длина</dt><dd>3 000 мм</dd>
+          <dt>Плотность</dt><dd>1,2</dd>
+          <dt>Покрытие</dt><dd>горячее ламинирование PUR, экокласс ENF</dd>
+          <dt>Где</dt><dd>внутренние стены и потолки</dd>
+        </dl>
+      </div>
+      <div class="tabs" role="group" aria-label="Коллекция"><button type="button" class="tab btab on" data-b="all">Все <span>144</span></button><button type="button" class="tab btab" data-b="0">Дерево <span>67</span></button><button type="button" class="tab btab" data-b="1">Арт-серия <span>12</span></button><button type="button" class="tab btab" data-b="2">Арт-ткань <span>13</span></button><button type="button" class="tab btab" data-b="3">Классическая ткань <span>25</span></button><button type="button" class="tab btab" data-b="4">Премиум металл <span>6</span></button><button type="button" class="tab btab" data-b="5">Металл <span>3</span></button><button type="button" class="tab btab" data-b="6">Металл PET <span>18</span></button></div><p class="fine-try">Нажмите на образец, чтобы увидеть его на стене кухни, спальни, ванной или гостиной. Со значком «фото» — реалистичные интерьеры.</p><div class="swgrid" id="bsgrid"><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX001A.jpg" alt="Бамбуковая панель, Дерево, декор EX001A"><figcaption>EX001A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX002A.jpg" alt="Бамбуковая панель, Дерево, декор EX002A"><figcaption>EX002A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX003A.jpg" alt="Бамбуковая панель, Дерево, декор EX003A"><figcaption>EX003A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX006A.jpg" alt="Бамбуковая панель, Дерево, декор EX006A"><figcaption>EX006A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX007A.jpg" alt="Бамбуковая панель, Дерево, декор EX007A"><figcaption>EX007A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX008A.jpg" alt="Бамбуковая панель, Дерево, декор EX008A"><figcaption>EX008A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX009A.jpg" alt="Бамбуковая панель, Дерево, декор EX009A"><figcaption>EX009A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX010A.jpg" alt="Бамбуковая панель, Дерево, декор EX010A"><figcaption>EX010A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX011A.jpg" alt="Бамбуковая панель, Дерево, декор EX011A"><figcaption>EX011A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX012A.jpg" alt="Бамбуковая панель, Дерево, декор EX012A"><figcaption>EX012A</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX013B.jpg" alt="Бамбуковая панель, Дерево, декор EX013B"><figcaption>EX013B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX014B.jpg" alt="Бамбуковая панель, Дерево, декор EX014B"><figcaption>EX014B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX015B.jpg" alt="Бамбуковая панель, Дерево, декор EX015B"><figcaption>EX015B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX016B.jpg" alt="Бамбуковая панель, Дерево, декор EX016B"><figcaption>EX016B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX017B.jpg" alt="Бамбуковая панель, Дерево, декор EX017B"><figcaption>EX017B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX018B.jpg" alt="Бамбуковая панель, Дерево, декор EX018B"><figcaption>EX018B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX019B.jpg" alt="Бамбуковая панель, Дерево, декор EX019B"><figcaption>EX019B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX020B.jpg" alt="Бамбуковая панель, Дерево, декор EX020B"><figcaption>EX020B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX021B.jpg" alt="Бамбуковая панель, Дерево, декор EX021B"><figcaption>EX021B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX022B.jpg" alt="Бамбуковая панель, Дерево, декор EX022B"><figcaption>EX022B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX023B.jpg" alt="Бамбуковая панель, Дерево, декор EX023B"><figcaption>EX023B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX024B.jpg" alt="Бамбуковая панель, Дерево, декор EX024B"><figcaption>EX024B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX025B.jpg" alt="Бамбуковая панель, Дерево, декор EX025B"><figcaption>EX025B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX026B.jpg" alt="Бамбуковая панель, Дерево, декор EX026B"><figcaption>EX026B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX027B.jpg" alt="Бамбуковая панель, Дерево, декор EX027B"><figcaption>EX027B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX028B.jpg" alt="Бамбуковая панель, Дерево, декор EX028B"><figcaption>EX028B</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX029P.jpg" alt="Бамбуковая панель, Дерево, декор EX029P"><figcaption>EX029P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX030P.jpg" alt="Бамбуковая панель, Дерево, декор EX030P"><figcaption>EX030P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX032P.jpg" alt="Бамбуковая панель, Дерево, декор EX032P"><figcaption>EX032P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX033P.jpg" alt="Бамбуковая панель, Дерево, декор EX033P"><figcaption>EX033P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX034P.jpg" alt="Бамбуковая панель, Дерево, декор EX034P"><figcaption>EX034P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX035P.jpg" alt="Бамбуковая панель, Дерево, декор EX035P"><figcaption>EX035P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX036P.jpg" alt="Бамбуковая панель, Дерево, декор EX036P"><figcaption>EX036P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX037P.jpg" alt="Бамбуковая панель, Дерево, декор EX037P"><figcaption>EX037P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX038P.jpg" alt="Бамбуковая панель, Дерево, декор EX038P"><figcaption>EX038P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX039P.jpg" alt="Бамбуковая панель, Дерево, декор EX039P"><figcaption>EX039P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX040P.jpg" alt="Бамбуковая панель, Дерево, декор EX040P"><figcaption>EX040P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX041P.jpg" alt="Бамбуковая панель, Дерево, декор EX041P"><figcaption>EX041P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX042P.jpg" alt="Бамбуковая панель, Дерево, декор EX042P"><figcaption>EX042P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX043P.jpg" alt="Бамбуковая панель, Дерево, декор EX043P"><figcaption>EX043P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX044P.jpg" alt="Бамбуковая панель, Дерево, декор EX044P"><figcaption>EX044P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX045P.jpg" alt="Бамбуковая панель, Дерево, декор EX045P"><figcaption>EX045P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX046P.jpg" alt="Бамбуковая панель, Дерево, декор EX046P"><figcaption>EX046P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX047P.jpg" alt="Бамбуковая панель, Дерево, декор EX047P"><figcaption>EX047P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX048P.jpg" alt="Бамбуковая панель, Дерево, декор EX048P"><figcaption>EX048P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX049P.jpg" alt="Бамбуковая панель, Дерево, декор EX049P"><figcaption>EX049P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX050P.jpg" alt="Бамбуковая панель, Дерево, декор EX050P"><figcaption>EX050P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX051P.jpg" alt="Бамбуковая панель, Дерево, декор EX051P"><figcaption>EX051P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX052P.jpg" alt="Бамбуковая панель, Дерево, декор EX052P"><figcaption>EX052P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX053P.jpg" alt="Бамбуковая панель, Дерево, декор EX053P"><figcaption>EX053P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX054P.jpg" alt="Бамбуковая панель, Дерево, декор EX054P"><figcaption>EX054P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX055P.jpg" alt="Бамбуковая панель, Дерево, декор EX055P"><figcaption>EX055P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX056P.jpg" alt="Бамбуковая панель, Дерево, декор EX056P"><figcaption>EX056P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX057P.jpg" alt="Бамбуковая панель, Дерево, декор EX057P"><figcaption>EX057P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX058P.jpg" alt="Бамбуковая панель, Дерево, декор EX058P"><figcaption>EX058P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX059P.jpg" alt="Бамбуковая панель, Дерево, декор EX059P"><figcaption>EX059P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX060P.jpg" alt="Бамбуковая панель, Дерево, декор EX060P"><figcaption>EX060P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX061P.jpg" alt="Бамбуковая панель, Дерево, декор EX061P"><figcaption>EX061P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX062P.jpg" alt="Бамбуковая панель, Дерево, декор EX062P"><figcaption>EX062P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX063P.jpg" alt="Бамбуковая панель, Дерево, декор EX063P"><figcaption>EX063P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX064P.jpg" alt="Бамбуковая панель, Дерево, декор EX064P"><figcaption>EX064P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX065P.jpg" alt="Бамбуковая панель, Дерево, декор EX065P"><figcaption>EX065P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX066P.jpg" alt="Бамбуковая панель, Дерево, декор EX066P"><figcaption>EX066P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX067P.jpg" alt="Бамбуковая панель, Дерево, декор EX067P"><figcaption>EX067P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX068P.jpg" alt="Бамбуковая панель, Дерево, декор EX068P"><figcaption>EX068P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/EX069P.jpg" alt="Бамбуковая панель, Дерево, декор EX069P"><figcaption>EX069P</figcaption></figure><figure class="sw bsw" data-b="0"><img loading="lazy" width="488" height="740" src="cat/bs/TK031P.jpg" alt="Бамбуковая панель, Дерево, декор TK031P"><figcaption>TK031P</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX087Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX087Y"><figcaption>EX087Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX088Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX088Y"><figcaption>EX088Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX089Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX089Y"><figcaption>EX089Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX090Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX090Y"><figcaption>EX090Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX091Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX091Y"><figcaption>EX091Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX092Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX092Y"><figcaption>EX092Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX093Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX093Y"><figcaption>EX093Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX094Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX094Y"><figcaption>EX094Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX095Y.jpg" alt="Бамбуковая панель, Арт-серия, декор EX095Y"><figcaption>EX095Y</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX096M.jpg" alt="Бамбуковая панель, Арт-серия, декор EX096M"><figcaption>EX096M</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX097M.jpg" alt="Бамбуковая панель, Арт-серия, декор EX097M"><figcaption>EX097M</figcaption></figure><figure class="sw bsw" data-b="1"><img loading="lazy" width="488" height="740" src="cat/bs/EX098M.jpg" alt="Бамбуковая панель, Арт-серия, декор EX098M"><figcaption>EX098M</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX103B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX103B"><figcaption>EX103B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX104B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX104B"><figcaption>EX104B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX105B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX105B"><figcaption>EX105B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX106B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX106B"><figcaption>EX106B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX107B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX107B"><figcaption>EX107B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX108B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX108B"><figcaption>EX108B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX109B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX109B"><figcaption>EX109B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX110A.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX110A"><figcaption>EX110A</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX111A.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX111A"><figcaption>EX111A</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX112A.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX112A"><figcaption>EX112A</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX113B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX113B"><figcaption>EX113B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX114B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX114B"><figcaption>EX114B</figcaption></figure><figure class="sw bsw" data-b="2"><img loading="lazy" width="488" height="740" src="cat/bs/EX115B.jpg" alt="Бамбуковая панель, Арт-ткань, декор EX115B"><figcaption>EX115B</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX122P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX122P"><figcaption>EX122P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX123P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX123P"><figcaption>EX123P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX124P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX124P"><figcaption>EX124P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX125P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX125P"><figcaption>EX125P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX126P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX126P"><figcaption>EX126P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX127P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX127P"><figcaption>EX127P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX128P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX128P"><figcaption>EX128P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX129P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX129P"><figcaption>EX129P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX130P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX130P"><figcaption>EX130P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX131P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX131P"><figcaption>EX131P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX132P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX132P"><figcaption>EX132P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX133P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX133P"><figcaption>EX133P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX134P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX134P"><figcaption>EX134P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX135P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX135P"><figcaption>EX135P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX136P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX136P"><figcaption>EX136P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX137P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX137P"><figcaption>EX137P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX138P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX138P"><figcaption>EX138P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX139P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX139P"><figcaption>EX139P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX142P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX142P"><figcaption>EX142P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX143P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX143P"><figcaption>EX143P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX144P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX144P"><figcaption>EX144P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX150P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX150P"><figcaption>EX150P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX151P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX151P"><figcaption>EX151P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX152P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX152P"><figcaption>EX152P</figcaption></figure><figure class="sw bsw" data-b="3"><img loading="lazy" width="488" height="740" src="cat/bs/EX153P.jpg" alt="Бамбуковая панель, Классическая ткань, декор EX153P"><figcaption>EX153P</figcaption></figure><figure class="sw bsw" data-b="4"><img loading="lazy" width="488" height="740" src="cat/bs/EX187A.jpg" alt="Бамбуковая панель, Премиум металл, декор EX187A"><figcaption>EX187A</figcaption></figure><figure class="sw bsw" data-b="4"><img loading="lazy" width="488" height="740" src="cat/bs/EX188A.jpg" alt="Бамбуковая панель, Премиум металл, декор EX188A"><figcaption>EX188A</figcaption></figure><figure class="sw bsw" data-b="4"><img loading="lazy" width="488" height="740" src="cat/bs/EX189A.jpg" alt="Бамбуковая панель, Премиум металл, декор EX189A"><figcaption>EX189A</figcaption></figure><figure class="sw bsw" data-b="4"><img loading="lazy" width="488" height="740" src="cat/bs/EX193A.jpg" alt="Бамбуковая панель, Премиум металл, декор EX193A"><figcaption>EX193A</figcaption></figure><figure class="sw bsw" data-b="4"><img loading="lazy" width="488" height="740" src="cat/bs/EX194A.jpg" alt="Бамбуковая панель, Премиум металл, декор EX194A"><figcaption>EX194A</figcaption></figure><figure class="sw bsw" data-b="4"><img loading="lazy" width="488" height="740" src="cat/bs/EX195A.jpg" alt="Бамбуковая панель, Премиум металл, декор EX195A"><figcaption>EX195A</figcaption></figure><figure class="sw bsw" data-b="5"><img loading="lazy" width="488" height="740" src="cat/bs/EX199B.jpg" alt="Бамбуковая панель, Металл, декор EX199B"><figcaption>EX199B</figcaption></figure><figure class="sw bsw" data-b="5"><img loading="lazy" width="488" height="740" src="cat/bs/EX200B.jpg" alt="Бамбуковая панель, Металл, декор EX200B"><figcaption>EX200B</figcaption></figure><figure class="sw bsw" data-b="5"><img loading="lazy" width="488" height="740" src="cat/bs/EX201B.jpg" alt="Бамбуковая панель, Металл, декор EX201B"><figcaption>EX201B</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX202M.jpg" alt="Бамбуковая панель, Металл PET, декор EX202M"><figcaption>EX202M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX203M.jpg" alt="Бамбуковая панель, Металл PET, декор EX203M"><figcaption>EX203M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX204M.jpg" alt="Бамбуковая панель, Металл PET, декор EX204M"><figcaption>EX204M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX205M.jpg" alt="Бамбуковая панель, Металл PET, декор EX205M"><figcaption>EX205M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX206M.jpg" alt="Бамбуковая панель, Металл PET, декор EX206M"><figcaption>EX206M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX207M.jpg" alt="Бамбуковая панель, Металл PET, декор EX207M"><figcaption>EX207M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX208M.jpg" alt="Бамбуковая панель, Металл PET, декор EX208M"><figcaption>EX208M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX209M.jpg" alt="Бамбуковая панель, Металл PET, декор EX209M"><figcaption>EX209M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX210M.jpg" alt="Бамбуковая панель, Металл PET, декор EX210M"><figcaption>EX210M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX211M.jpg" alt="Бамбуковая панель, Металл PET, декор EX211M"><figcaption>EX211M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX212M.jpg" alt="Бамбуковая панель, Металл PET, декор EX212M"><figcaption>EX212M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX213M.jpg" alt="Бамбуковая панель, Металл PET, декор EX213M"><figcaption>EX213M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX214M.jpg" alt="Бамбуковая панель, Металл PET, декор EX214M"><figcaption>EX214M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX215M.jpg" alt="Бамбуковая панель, Металл PET, декор EX215M"><figcaption>EX215M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX216M.jpg" alt="Бамбуковая панель, Металл PET, декор EX216M"><figcaption>EX216M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX217M.jpg" alt="Бамбуковая панель, Металл PET, декор EX217M"><figcaption>EX217M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX218M.jpg" alt="Бамбуковая панель, Металл PET, декор EX218M"><figcaption>EX218M</figcaption></figure><figure class="sw bsw" data-b="6"><img loading="lazy" width="488" height="740" src="cat/bs/EX219M.jpg" alt="Бамбуковая панель, Металл PET, декор EX219M"><figcaption>EX219M</figcaption></figure></div>
+      <p class="fine">Артикул указан под каждым образцом. Образцы покажем в шоуруме или пришлём подборку в директ: напишите <span class="kw">СТЕНА</span>.</p>
+    </div>
+  </section>
+</main>
+
+<div class="fab" aria-label="Написать нам">
+  <a class="tg" data-c="tg" href="https://t.me/panelka56" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1.1-1 .2-1.5L20.6 2.8c.9-.3 1.6.2 1.3 1.5Z"/></svg></a>
+  <a class="wa" data-c="wa" href="#request" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg></a>
+</div>
+
+<footer id="contacts">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="logo" href="#top"><b>EX-DECOR</b><small>стены под ключ</small></a>
+        <p style="margin-top:14px;max-width:30ch">Бамбуковые панели, рейки и гибкий мрамор в Оренбурге. Доставка по всей России.</p>
+      </div>
+      <div>
+        <h4>Каталог</h4>
+        <ul><li><a href="#katalog">Бамбуковые панели</a></li><li><a href="#katalog">Реечные панели</a></li><li><a href="#katalog">Гибкий мрамор</a></li></ul>
+      </div>
+      <div>
+        <h4>Клиентам</h4>
+        <ul><li><a href="#montazh">Замер и монтаж</a></li><li><a href="#materials">Материалы</a></li><li><a href="#rooms">Где применяют</a></li></ul>
+      </div>
+      <div>
+        <h4>Шоурум</h4>
+        <p class="addr">Оренбург, ул. Терешковой, 287/3</p>
+        <ul style="margin-top:12px">
+          <li><a href="https://instagram.com/exdecor.ru" target="_blank" rel="noopener">Instagram: @exdecor.ru</a></li>
+          <li><a data-c="tg" href="https://t.me/panelka56" target="_blank" rel="noopener">Telegram: @panelka56</a></li>
+          <li><a href="https://t.me/exclusivedeco" target="_blank" rel="noopener">Канал: t.me/exclusivedeco</a></li>
+          <li><a data-c="wa" href="#request" target="_blank" rel="noopener">WhatsApp: <span data-show="wa"></span></a></li>
+          <li><a data-c="ml" href="#request">Почта: <span data-show="ml"></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 EX-DECOR</span><span>Цены уточняйте в шоуруме или в директ</span></div>
+  </div>
+</footer>
+
+<script>
+
+(function(){
+  var home=document.querySelector('.home-view'), cat=document.getElementById('katalog-view');
+  function route(){
+    var h=location.hash.slice(1);
+    var inCat=h==='katalog'||h.indexOf('katalog-')===0;
+    cat.hidden=!inCat; home.hidden=inCat;
+    if(inCat){var t=document.getElementById(h==='katalog'?'katalog-view':h); if(t) t.scrollIntoView(); else window.scrollTo(0,0);}
+    else if(!h||h==='top'){window.scrollTo(0,0);}
+  }
+  window.addEventListener('hashchange',route); route();
+  var tabs=document.querySelectorAll('.tab:not(.btab)'), sws=document.querySelectorAll('#swgrid .sw');
+  var btabs=document.querySelectorAll('.btab'), pgs=document.querySelectorAll('.bsw');
+  btabs.forEach(function(b){b.addEventListener('click',function(){btabs.forEach(function(x){x.classList.toggle('on',x===b)});var f=b.dataset.b;pgs.forEach(function(el){el.hidden=!(f==='all'||el.dataset.b===f)});})});
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.classList.toggle('on',x===b)});
+    var f=b.dataset.f; sws.forEach(function(el){el.hidden=!(f==='all'||el.dataset.s===f)});
+  })});
+})();
+
+/* ===== КОНТАКТЫ: заполнить здесь ===== */
+var CONTACT={
+  email:'drakdrakula561@gmail.com', // почта для заявок (FormSubmit)
+  wa:'79878927709',    // WhatsApp, только цифры
+  sheet:'',           // URL веб-приложения Google Apps Script (таблица заявок) — ждём от владельца
+  tg:'panelka56'       // Telegram для сообщений: @panelka56
+};
+(function(){
+  var hasMail=/.+@.+\..+/.test(CONTACT.email), hasWa=/^\d{10,15}$/.test(CONTACT.wa);
+  var missing=[];
+  if(!hasMail)missing.push('почту'); if(!hasWa)missing.push('номер WhatsApp');
+  document.querySelectorAll('[data-c="wa"]').forEach(function(a){
+    if(hasWa){a.href='https://wa.me/'+CONTACT.wa+'?text='+encodeURIComponent('Здравствуйте! Хочу рассчитать стену.');}
+    else{a.classList.add('stub');a.removeAttribute('target');a.href='#request';}
+  });
+  document.querySelectorAll('[data-c="tg"]').forEach(function(a){a.href='https://t.me/'+CONTACT.tg;});
+  document.querySelectorAll('[data-c="ml"]').forEach(function(a){
+    if(hasMail){a.href='mailto:'+CONTACT.email+'?subject='+encodeURIComponent('Заявка с сайта EX-DECOR');}
+    else{a.classList.add('stub');}
+  });
+  document.querySelectorAll('[data-show="wa"]').forEach(function(el){el.textContent=hasWa?('+'+CONTACT.wa):'номер уточняется';});
+  document.querySelectorAll('[data-show="ml"]').forEach(function(el){el.textContent=hasMail?CONTACT.email:'адрес уточняется';});
+  var mt=document.getElementById('mail-text');
+  if(hasMail)mt.textContent=CONTACT.email;else mt.classList.add('stub');
+  if(missing.length){var n=document.getElementById('stubnote');n.textContent='Макет: добавьте '+missing.join(' и ')+' в настройки сайта.';n.hidden=false;}
+  document.getElementById('mail-copy').addEventListener('click',function(){
+    var t=mt.textContent,btn=this;
+    function sel(){var r=document.createRange();r.selectNodeContents(mt);var g=getSelection();g.removeAllRanges();g.addRange(r);}
+    try{navigator.clipboard.writeText(t).then(function(){btn.textContent='Скопировано';},sel);}catch(e){sel();}
+  });
+  window.__exHas={mail:hasMail,wa:hasWa};
+})();
+
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var name=document.getElementById('name').value.trim();
+  var phone=document.getElementById('phone').value.trim();
+  var msg=document.getElementById('msg').value.trim();
+  var p=phone.replace(/\D/g,'');
+  var ok=document.getElementById('ok'); ok.classList.remove('good');
+  if(p.length<10){ok.textContent='Введите номер телефона полностью, 10–11 цифр.';ok.hidden=false;return;}
+  if(!document.getElementById('agree').checked){ok.textContent='Отметьте согласие на обработку данных.';ok.hidden=false;return;}
+  var text='Заявка с сайта EX-DECOR\nИмя: '+(name||'—')+'\nТелефон: '+phone+(msg?'\nКомментарий: '+msg:'');
+  var btn=this.querySelector('button[type=submit]');
+  function fallback(){
+    ok.textContent='';
+    var t=document.createElement('span');t.textContent='Отправьте заявку одним нажатием в удобный мессенджер, текст уже готов: ';ok.appendChild(t);
+    var has=window.__exHas;
+    if(has.wa){var a=document.createElement('a');a.href='https://wa.me/'+CONTACT.wa+'?text='+encodeURIComponent(text);a.target='_blank';a.rel='noopener';a.textContent='WhatsApp';ok.appendChild(a);ok.appendChild(document.createTextNode(' · '));}
+    var tg=document.createElement('a');tg.href='https://t.me/share/url?url='+encodeURIComponent('https://t.me/'+CONTACT.tg)+'&text='+encodeURIComponent(text);tg.target='_blank';tg.rel='noopener';tg.textContent='Telegram';ok.appendChild(tg);
+    if(has.mail){ok.appendChild(document.createTextNode(' · '));var m=document.createElement('a');m.href='mailto:'+CONTACT.email+'?subject='+encodeURIComponent('Заявка с сайта EX-DECOR')+'&body='+encodeURIComponent(text);m.textContent='Почта';ok.appendChild(m);}
+    ok.hidden=false;
+  }
+  if(/^https:\/\/script\.google\.com\//.test(CONTACT.sheet)){
+    try{var fd=new URLSearchParams();fd.append('name',name);fd.append('phone',phone);fd.append('msg',msg);fd.append('page',location.href);
+      fetch(CONTACT.sheet,{method:'POST',mode:'no-cors',body:fd}).catch(function(){});}catch(_){}
+  }
+  if(!window.__exHas.mail){fallback();return;}
+  btn.disabled=true;
+  var ctl=('AbortController' in window)?new AbortController():null; var tm=setTimeout(function(){ctl&&ctl.abort();},9000);
+  fetch('https://formsubmit.co/ajax/'+encodeURIComponent(CONTACT.email),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({_subject:'Заявка с сайта EX-DECOR',_template:'table',_captcha:'false','Имя':name||'—','Телефон':phone,'Комментарий':msg||'—'}),signal:ctl?ctl.signal:undefined})
+  .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw 0;});})
+  .then(function(){ok.textContent='Спасибо! Заявка ушла, перезвоним в рабочее время.';ok.classList.add('good');ok.hidden=false;document.getElementById('f').reset();})
+  .catch(fallback)
+  .then(function(){clearTimeout(tm);btn.disabled=false;});
+});
+</script>
+
+<dialog class="viz" id="viz" aria-labelledby="viz-code">
+  <div class="viz-head">
+    <div class="viz-sw"><img id="viz-swimg" alt=""></div>
+    <div class="viz-title"><b id="viz-code"></b><span id="viz-kind"></span></div>
+    <button type="button" class="viz-x" id="viz-x" aria-label="Закрыть">×</button>
+  </div>
+  <div class="viz-rooms" role="group" aria-label="Комната">
+    <button type="button" class="tab on" data-room="kuhnya">Кухня</button>
+    <button type="button" class="tab" data-room="spalnya">Спальня</button>
+    <button type="button" class="tab" data-room="vannaya">Ванная</button>
+    <button type="button" class="tab" data-room="gostinaya">Гостиная</button>
+  </div>
+  <div class="viz-stage">
+    <canvas id="viz-cv" width="1600" height="1195" role="img" aria-label=""></canvas>
+  </div>
+  <div class="viz-foot">
+    <p id="viz-note">Примерная визуализация. Живой образец покажем в шоуруме на Терешковой 287/3.</p>
+    <div class="viz-nav"><button type="button" id="viz-prev" aria-label="Предыдущий декор">←</button><button type="button" id="viz-next" aria-label="Следующий декор">→</button></div>
+    <a class="btn btn-sand" href="#request" id="viz-cta">Хочу такую стену <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</dialog>
+<script>
+(function(){
+  var dlg=document.getElementById('viz'); if(!dlg) return;
+  var cv=document.getElementById('viz-cv'), ctx=cv.getContext('2d');
+  var codeEl=document.getElementById('viz-code'), kindEl=document.getElementById('viz-kind'), swimg=document.getElementById('viz-swimg');
+  var roomBtns=dlg.querySelectorAll('[data-room]'), names={kuhnya:'кухне',spalnya:'спальне',vannaya:'ванной',gostinaya:'гостиной'};
+  /* стена в кадре (px) и масштаб: пикселей на метр */
+  var ROOMS={kuhnya:{bb:[226,258,1367,692],ppm:250},spalnya:{bb:[182,175,1418,875],ppm:255},vannaya:{bb:[112,127,1291,941],ppm:287},gostinaya:{bb:[118,176,1480,931],ppm:276}};
+  var cache={}, cur=null, curRoom='kuhnya', token=0;
+  /* декоры с реалистичными фото интерьеров (img/ai/КОД_комната.jpg) */
+  var AI={}; ['EX001A','EX003A','EX009A','EX012A','EX016B','EX022B','EX030P','EX045P','EX057P','EX065P','EX096M','EX125P','EX205M','C02','C04','E07','E29','M90'].forEach(function(c){AI[c]=1});
+  var noteEl=document.getElementById('viz-note');
+  document.querySelectorAll('.swgrid .sw').forEach(function(f){ var c=f.querySelector('figcaption'); if(c&&AI[c.textContent]) f.classList.add('has-ai'); });
+  function load(src){ if(!cache[src]) cache[src]=new Promise(function(res,rej){var i=new Image();i.onload=function(){res(i)};i.onerror=rej;i.src=src;}); return cache[src]; }
+  function rnd(seed){ var s=0; for(var i=0;i<seed.length;i++) s=(s*31+seed.charCodeAt(i))>>>0; return function(){ s=(s*1664525+1013904223)>>>0; return s/4294967296; }; }
+  var noise=null;
+  function grain(){ if(noise) return noise; noise=document.createElement('canvas'); noise.width=noise.height=256; var g=noise.getContext('2d'), d=g.createImageData(256,256);
+    for(var i=0;i<d.data.length;i+=4){ var v=118+Math.random()*20|0; d.data[i]=d.data[i+1]=d.data[i+2]=v; d.data[i+3]=255; } g.putImageData(d,0,0); return noise; }
+  /* одна панель/лист: кусок образца во всю высоту стены */
+  function drawSheet(sw,x,w,y0,H,flip,off,tileH){
+    ctx.save(); ctx.beginPath(); ctx.rect(x,y0,w,H); ctx.clip();
+    if(flip){ ctx.translate(x*2+w,0); ctx.scale(-1,1); }
+    if(tileH){ /* узор: плитка нормального размера, без растягивания */
+      var tw=tileH*sw.width/sw.height, ox=-off*tw, row=0;
+      for(var y=y0;y<y0+H;y+=tileH,row++){ for(var xx=x+ox;xx<x+w;xx+=tw){ ctx.save(); if(row%2){ ctx.translate(0,y*2+tileH); ctx.scale(1,-1);} ctx.drawImage(sw,xx,y,tw+0.5,tileH+0.5); ctx.restore(); } }
+    } else { /* дерево, мрамор, металл: образец по высоте стены, берём разные участки */
+      var sc=H/sw.height, fullW=sw.width*sc, dw=Math.max(fullW,w), sx=(dw-w)*off;
+      ctx.drawImage(sw,0,0,sw.width,sw.height,x-sx,y0,dw,H);
+    }
+    ctx.restore();
+  }
+  function render(){
+    if(!cur) return; var my=++token, fig=cur, room=curRoom, R=ROOMS[room];
+    var src=fig.querySelector('img').getAttribute('src'), code=fig.querySelector('figcaption').textContent;
+    var marble=!!fig.closest('#swgrid'), b=+(fig.dataset.b||0), pattern=!marble&&b>=1&&b<=3;
+    if(AI[code]){ noteEl.textContent='Фото-пример интерьера с этим декором. Точный оттенок и рисунок покажем на живом образце в шоуруме на Терешковой 287/3.';
+      load('img/ai/'+code+'_'+room+'.jpg').then(function(ph){ if(my!==token) return; ctx.clearRect(0,0,cv.width,cv.height); ctx.drawImage(ph,0,0,cv.width,cv.height); cv.setAttribute('aria-label',code+' на стене в '+names[room]); });
+      Object.keys(ROOMS).forEach(function(r){ if(r!==room) load('img/ai/'+code+'_'+r+'.jpg'); });
+      return; }
+    noteEl.textContent='Схематичная примерка. Реалистичные фото интерьеров есть у декоров со значком «фото». Живой образец покажем в шоуруме на Терешковой 287/3.';
+    Promise.all([load(src),load('img/rooms/'+room+'_sh.jpg'),load('img/rooms/'+room+'.webp')]).then(function(a){
+      if(my!==token) return; var sw=a[0], sh=a[1], rm=a[2];
+      var x0=R.bb[0],y0=R.bb[1],x1=R.bb[2],y1=R.bb[3],W=x1-x0,H=y1-y0, ppm=R.ppm;
+      var sheetW=1.22*ppm, n=Math.max(1,Math.round(W/sheetW)), w=W/n, r=rnd(code+room);
+      ctx.clearRect(0,0,cv.width,cv.height);
+      ctx.imageSmoothingEnabled=true; ctx.imageSmoothingQuality='high';
+      var start=r()*n|0;
+      for(var i=0;i<n;i++){ /* мрамор: каждый лист с одинаковой печатью, как в жизни; дерево: соседние панели разворачиваем */
+        if(marble) drawSheet(sw,x0+i*w,w+1,y0,H,false,0.5,0); else drawSheet(sw,x0+i*w,w+1,y0,H,(i+start)%2===1,r(),pattern?0.9*ppm:0); }
+      /* стыки между листами */
+      for(i=1;i<n;i++){ var jx=Math.round(x0+i*w)+0.5; ctx.fillStyle='rgba(0,0,0,'+(marble?0.18:0.32)+')'; ctx.fillRect(jx-1,y0,1.6,H); ctx.fillStyle='rgba(255,255,255,'+(marble?0.10:0.14)+')'; ctx.fillRect(jx+0.8,y0,1,H); }
+      /* мелкое зерно, чтобы не было «цифровой» гладкости */
+      ctx.save(); ctx.globalCompositeOperation='overlay'; ctx.globalAlpha=0.22; ctx.fillStyle=ctx.createPattern(grain(),'repeat'); ctx.fillRect(x0,y0,W,H); ctx.restore();
+      /* свет и тени комнаты */
+      ctx.save(); ctx.globalCompositeOperation='multiply'; ctx.drawImage(sh,0,0,cv.width,cv.height);
+      var g=ctx.createLinearGradient(0,y0,0,y1); g.addColorStop(0,'rgba(200,190,180,1)'); g.addColorStop(0.18,'rgba(255,255,255,1)'); g.addColorStop(0.85,'rgba(255,255,255,1)'); g.addColorStop(1,'rgba(215,205,195,1)');
+      ctx.fillStyle=g; ctx.fillRect(x0,y0,W,H);
+      var gx=ctx.createLinearGradient(x0,0,x1,0); gx.addColorStop(0,'rgba(215,208,200,1)'); gx.addColorStop(0.08,'rgba(255,255,255,1)'); gx.addColorStop(0.92,'rgba(255,255,255,1)'); gx.addColorStop(1,'rgba(215,208,200,1)');
+      ctx.fillStyle=gx; ctx.fillRect(x0,y0,W,H); ctx.restore();
+      if(marble){ /* лёгкий блик на поверхности */
+        ctx.save(); ctx.globalCompositeOperation='screen'; var sp=ctx.createLinearGradient(x0,y0,x0+W*0.7,y1); sp.addColorStop(0,'rgba(255,255,255,0)'); sp.addColorStop(0.45,'rgba(255,250,240,0.10)'); sp.addColorStop(0.6,'rgba(255,255,255,0)'); ctx.fillStyle=sp; ctx.fillRect(x0,y0,W,H); ctx.restore(); }
+      ctx.drawImage(rm,0,0,cv.width,cv.height);
+      cv.setAttribute('aria-label',code+' на стене в '+names[room]);
+    });
+  }
+  function setRoom(r){ curRoom=r; roomBtns.forEach(function(b){b.classList.toggle('on',b.dataset.room===r)}); render(); }
+  function show(fig){ cur=fig; var img=fig.querySelector('img'), code=fig.querySelector('figcaption').textContent, marble=!!fig.closest('#swgrid');
+    codeEl.textContent=code; kindEl.textContent=marble?'Гибкий мрамор':'Бамбуковые панели · '+(img.alt.split(', ')[1]||'');
+    swimg.src=img.getAttribute('src'); render(); }
+  function list(){ if(!cur) return []; return Array.prototype.filter.call(cur.closest('.swgrid').querySelectorAll('.sw'),function(f){return !f.hidden}); }
+  document.querySelectorAll('.swgrid').forEach(function(g){ g.addEventListener('click',function(e){ var f=e.target.closest('.sw'); if(!f) return; show(f); if(!dlg.open) dlg.showModal(); }); });
+  document.querySelectorAll('.swgrid .sw').forEach(function(f){ f.tabIndex=0; f.setAttribute('role','button'); f.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault(); f.click();} }); });
+  roomBtns.forEach(function(b){ b.addEventListener('click',function(){ setRoom(b.dataset.room); }); });
+  function step(d){ var l=list(), i=l.indexOf(cur); if(i<0) return; show(l[(i+d+l.length)%l.length]); }
+  document.getElementById('viz-prev').addEventListener('click',function(){step(-1)});
+  document.getElementById('viz-next').addEventListener('click',function(){step(1)});
+  document.getElementById('viz-x').addEventListener('click',function(){dlg.close()});
+  document.getElementById('viz-cta').addEventListener('click',function(){dlg.close()});
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.close(); });
+  dlg.addEventListener('keydown',function(e){ if(e.key==='ArrowRight') step(1); if(e.key==='ArrowLeft') step(-1); });
+  var q=location.search.match(/vizdemo=([^&]+)&r=(\w+)/); if(q){ var f=document.querySelector('[data-code="'+q[1]+'"]')||Array.prototype.find.call(document.querySelectorAll('.swgrid .sw'),function(x){return x.querySelector('figcaption').textContent===q[1]}); curRoom=q[2]; roomBtns.forEach(function(b){b.classList.toggle('on',b.dataset.room===q[2])}); show(f); dlg.showModal(); }
+})();
+</script>
+
+</body>
+</html>
