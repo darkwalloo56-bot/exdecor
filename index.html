@@ -66,7 +66,10 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 .hero h1{font-size:clamp(44px,6.4vw,84px);max-width:13ch}
 .hero h1 .script{font-family:var(--f-script);color:var(--sand);font-size:1.12em;font-weight:400;display:inline-block;transform:rotate(-4deg);margin-right:.12em}
 .hero p.lead{max-width:44ch;margin-top:26px;font-size:17px;color:var(--on-dark-muted)}
-.hero .btn{margin-top:34px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn-ghost{background:rgba(42,31,23,.35);color:var(--on-dark);border:1px solid rgba(201,169,122,.6)}
+.btn-ghost:hover{background:rgba(42,31,23,.6)}
+.btn-ghost .arr{background:var(--sand);color:var(--walnut)}
 .perks{display:flex;flex-wrap:wrap;gap:14px 34px;margin-top:56px;font-size:13px;color:var(--on-dark-muted)}
 .perks div{display:flex;align-items:center;gap:10px;max-width:180px;line-height:1.35}
 .perks svg{flex:none;color:var(--sand)}
@@ -169,6 +172,9 @@ section{padding-block:84px 0}
 .fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;flex-direction:column;gap:10px}
 .fab a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 10px 24px -8px rgba(42,31,23,.55);transition:transform .2s ease}
 .fab a:hover{transform:scale(1.06)}
+.fab{align-items:flex-end}
+.fab a.req-pill{width:auto;height:auto;border-radius:999px;padding:13px 20px;background:var(--walnut);color:var(--sand);font:700 14px var(--f-body);text-decoration:none;border:1px solid var(--sand)}
+.fab a.req-pill:hover{transform:translateY(-1px)}
 .fab a svg{width:26px;height:26px}
 .fab .tg{background:#2a8ec8}.fab .wa{background:#1f9e55}
 .fab a:focus-visible{outline:3px solid var(--sand);outline-offset:3px}
@@ -252,8 +258,7 @@ footer .addr{color:var(--on-dark);font-size:16px}
   .mat{grid-template-columns:minmax(0,1fr);padding:22px}
   .mat .sw{aspect-ratio:16/9}
   .fgrid{grid-template-columns:minmax(0,1fr)}
-  .nav .btn span.t{display:none}
-  .nav .btn{padding:9px}
+  .nav .btn{padding:7px 7px 7px 16px;font-size:13px;gap:10px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
@@ -298,7 +303,7 @@ dialog.viz::backdrop{background:rgba(20,14,10,.72)}
       <a href="#materials">Материалы</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <a class="btn btn-sand" href="#request"><span class="t">Рассчитать стену</span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="btn btn-sand" href="#request"><span class="t">Оставить заявку</span><span class="arr" aria-hidden="true">→</span></a>
   </div>
 </header>
 
@@ -308,7 +313,7 @@ dialog.viz::backdrop{background:rgba(20,14,10,.72)}
     <div class="wrap">
       <h1>Стены, которые <span class="script">задают</span> тон вашему дому</h1>
       <p class="lead">Бамбуковые панели, рейки и гибкий мрамор напрямую с завода. Замеряем бесплатно, монтируем своей бригадой: одна стена за один день.</p>
-      <a class="btn btn-sand" href="#katalog">Смотреть каталог <span class="arr" aria-hidden="true">→</span></a>
+      <div class="hero-cta"><a class="btn btn-sand" href="#request">Оставить заявку <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#katalog">Смотреть каталог <span class="arr" aria-hidden="true">→</span></a></div>
       <div class="perks">
         <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3" width="3" height="18" rx="1"/><rect x="10.5" y="3" width="3" height="18" rx="1"/><rect x="17" y="3" width="3" height="18" rx="1"/></svg>Напрямую с завода</div>
         <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg>Монтаж стены за 1 день</div>
@@ -515,6 +520,7 @@ dialog.viz::backdrop{background:rgba(20,14,10,.72)}
 </main>
 
 <div class="fab" aria-label="Написать нам">
+  <a class="req-pill" href="#request">Оставить заявку</a>
   <a class="tg" data-c="tg" href="https://t.me/panelka56" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1.1-1 .2-1.5L20.6 2.8c.9-.3 1.6.2 1.3 1.5Z"/></svg></a>
   <a class="wa" data-c="wa" href="#request" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg></a>
 </div>
@@ -560,6 +566,7 @@ dialog.viz::backdrop{background:rgba(20,14,10,.72)}
     cat.hidden=!inCat; home.hidden=inCat;
     if(inCat){var t=document.getElementById(h==='katalog'?'katalog-view':h); if(t) t.scrollIntoView(); else window.scrollTo(0,0);}
     else if(!h||h==='top'){window.scrollTo(0,0);}
+    else{var t2=document.getElementById(h); if(t2) t2.scrollIntoView();}
   }
   window.addEventListener('hashchange',route); route();
   var tabs=document.querySelectorAll('.tab:not(.btab)'), sws=document.querySelectorAll('#swgrid .sw');
